@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User input counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #44acff;
+
+        }
+
+        .container {
+            background: #fff;
+            position: relative;
+            width: 500px;
+            padding: 20px 85px 20px 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            border-radius: 7px;
+        }
+
+        .container .textbx {
+            width: 100%;
+            outline: none;
+            padding: 12px;
+            border: 2px solid #687d8b;
+            border-radius: 3px;
+            color: #687d8b;
+            font-size: 1.35em;
+        }
+
+        .container .textbx::placeholder {
+            color: #6e7d8b;
+        }
+
+        .container .counter {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" name="name" id="name" placeholder="Write your name.." required class="textbx" maxlength="24">
+        <span class="counter">24</span>
+
+    </div>
+
+    <script>
+        let textbx = document.querySelector('.textbx');
+        let counter = document.querySelector('.counter');
+        mxlength = textbx.getAttribute('maxlength');
+
+        textbx.onkeyup = () => {
+            counter.innerText = mxlength - textbx.value.length;
+        }
+    </script>
+</body>
+
+</html>

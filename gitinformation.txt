@@ -1,0 +1,14 @@
+add file to push list
+git add file path   e.g public/js/app/services/app.magentoSvc.js
+
+to un add file from git push list
+git reset public/js/app/services/app.magentoSvc.js
+
+to add all files 
+git add --all
+
+git revert changes form file
+git checkout file or folder path
+
+to create new branch
+git checkout -b "improvement/maria_db_test"

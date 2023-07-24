@@ -1,0 +1,9 @@
+First Module:
+1- Introduction to deep learning 1 and 2
+2- Neural network
+3- Unsupervised learning
+   clustering:
+	k-mean clustering
+	mean shift clustring
+	herarichal clustring
+   PCA(principal component analaysis)
